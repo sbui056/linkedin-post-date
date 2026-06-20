@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=340">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <header class="popup-header">
+      <div class="popup-brand">
+        <img src="icons/icon48.png" alt="" class="popup-logo">
+        <div>
+          <h1 class="popup-title">LinkedIn Post Date</h1>
+          <p class="popup-subtitle">LinkedIn UX Toolkit</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-body">
+      <div class="feature-group">
+        <div class="feature-item">
+          <div class="feature-info">
+            <div class="feature-icon">&#128197;</div>
+            <div>
+              <div class="feature-name">Exact Post Dates</div>
+              <div class="feature-desc">Show the real date on every post</div>
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-showDates" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item sub-setting" id="dateFormatRow">
+          <div class="feature-info">
+            <div class="feature-icon"></div>
+            <div>
+              <div class="feature-name format-label">Date format</div>
+            </div>
+          </div>
+          <select id="dateFormat" class="format-select">
+            <option value="short">Jun 18, 2026</option>
+            <option value="long">June 18, 2026 2:34 PM</option>
+            <option value="iso">2026-06-18</option>
+          </select>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-info">
+            <div class="feature-icon">&#128279;</div>
+            <div>
+              <div class="feature-name">Copy Clean URL</div>
+              <div class="feature-desc">One-click clean post link</div>
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-copyCleanUrl" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-info">
+            <div class="feature-icon">&#128196;</div>
+            <div>
+              <div class="feature-name">Auto-Expand Posts</div>
+              <div class="feature-desc">No more "see more" clicks</div>
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-autoExpand">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-info">
+            <div class="feature-icon">&#128683;</div>
+            <div>
+              <div class="feature-name">Hide Promoted</div>
+              <div class="feature-desc">Remove sponsored posts</div>
+              <div class="promoted-count" id="promotedCount" style="display:none"></div>
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-hidePromoted">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <span class="popup-version">v1.0.0</span>
+      <a href="https://github.com/sbui056/linkedin-post-date" target="_blank" class="popup-link">GitHub</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

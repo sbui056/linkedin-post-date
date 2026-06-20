@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Post Date — See the exact date of any LinkedIn post</title>
+  <meta name="description" content="Find the exact date and time any LinkedIn post was published. Paste a URL and get the real timestamp instantly.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1f4c5;</text></svg>">
+</head>
+<body>
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">See the <span class="highlight">exact date</span> of any LinkedIn post</h1>
+      <p class="hero-desc">LinkedIn shows "2mo ago" instead of real dates. Paste any post URL below to get the exact timestamp.</p>
+    </div>
+  </section>
+
+  <section class="tool-section" id="tool">
+    <div class="container">
+      <div class="tool-card">
+        <div class="tool-input-wrap">
+          <input type="text" id="urlInput" class="tool-input" placeholder="Paste a LinkedIn post URL or activity ID..." autocomplete="off" spellcheck="false">
+          <button id="extractBtn" class="tool-btn">Get Date</button>
+        </div>
+        <div id="result" class="tool-result" style="display:none">
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Date</div>
+              <div class="result-value" id="resultShort"></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Full Date &amp; Time</div>
+              <div class="result-value" id="resultLong"></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">ISO Format</div>
+              <div class="result-value result-mono" id="resultISO"></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Post ID</div>
+              <div class="result-value result-mono" id="resultID"></div>
+            </div>
+          </div>
+        </div>
+        <div id="error" class="tool-error" style="display:none"></div>
+      </div>
+      <div class="how-it-works">
+        <p>Every LinkedIn post ID encodes the exact creation timestamp in its first 41 binary bits. This tool extracts it — no servers, no tracking, everything runs in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="https://github.com/sbui056/linkedin-post-date" class="footer-link">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
