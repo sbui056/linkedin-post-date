@@ -84,7 +84,7 @@ urlInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') extract();
 });
 
-// Auto-extract on paste
-urlInput.addEventListener('paste', () => {
-  setTimeout(extract, 50);
+// Auto-extract on paste (use input event — fires after value updates)
+urlInput.addEventListener('input', (e) => {
+  if (e.inputType === 'insertFromPaste') extract();
 });

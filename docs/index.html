@@ -23,7 +23,7 @@
           <input type="text" id="urlInput" class="tool-input" placeholder="Paste a LinkedIn post URL or activity ID..." autocomplete="off" spellcheck="false">
           <button id="extractBtn" class="tool-btn">Get Date</button>
         </div>
-        <div id="result" class="tool-result" style="display:none">
+        <div id="result" class="tool-result" style="display:none" aria-live="polite">
           <div class="result-grid">
             <div class="result-item">
               <div class="result-label">Date</div>
@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div id="error" class="tool-error" style="display:none"></div>
+        <div id="error" class="tool-error" style="display:none" role="alert"></div>
       </div>
       <div class="how-it-works">
         <p>Every LinkedIn post ID encodes the exact creation timestamp in its first 41 binary bits. This tool extracts it — no servers, no tracking, everything runs in your browser.</p>

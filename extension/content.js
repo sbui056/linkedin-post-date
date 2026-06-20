@@ -81,7 +81,7 @@
         el.removeAttribute('data-lpt-promoted');
       });
       promotedCount = 0;
-      chrome.runtime.sendMessage({ type: 'setPromotedCount', count: 0 });
+      try { chrome.runtime.sendMessage({ type: 'setPromotedCount', count: 0 }); } catch {}
     }
     processAll();
   });
@@ -192,7 +192,28 @@
       const btn = document.createElement('button');
       btn.className = 'lpt-copy-btn';
       btn.title = 'Copy clean post URL';
-      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="lpt-copy-label">Copy link</span>`;
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('width', '16');
+      svg.setAttribute('height', '16');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor');
+      svg.setAttribute('stroke-width', '2');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      rect.setAttribute('x', '9'); rect.setAttribute('y', '9');
+      rect.setAttribute('width', '13'); rect.setAttribute('height', '13');
+      rect.setAttribute('rx', '2'); rect.setAttribute('ry', '2');
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', 'M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1');
+      svg.appendChild(rect);
+      svg.appendChild(path);
+      const label = document.createElement('span');
+      label.className = 'lpt-copy-label';
+      label.textContent = 'Copy link';
+      btn.appendChild(svg);
+      btn.appendChild(label);
 
       btn.addEventListener('click', async (e) => {
         e.preventDefault();
@@ -231,7 +252,7 @@
 
     const seeMoreButtons = document.querySelectorAll(
       '.feed-shared-inline-show-more-text button:not([data-lpt-expanded]), ' +
-      'button.see-more[data-lpt-expanded]:not([data-lpt-expanded="true"]), ' +
+      'button.see-more:not([data-lpt-expanded]), ' +
       '[data-test-id="inline-show-more-text__button"]:not([data-lpt-expanded])'
     );
 
@@ -274,7 +295,7 @@
       if (isPromoted) {
         post.style.display = 'none';
         promotedCount++;
-        chrome.runtime.sendMessage({ type: 'setPromotedCount', count: promotedCount });
+        try { chrome.runtime.sendMessage({ type: 'setPromotedCount', count: promotedCount }); } catch {}
       }
     });
   }
@@ -304,14 +325,10 @@
       setTimeout(processAll, 500);
     }
   });
-  urlObserver.observe(document.querySelector('title') || document.head, {
+  urlObserver.observe(document.querySelector('title') || document.documentElement, {
     childList: true, subtree: true, characterData: true,
   });
 
-  // Initial run
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', processAll);
-  } else {
-    processAll();
-  }
+  // Initial processAll() is triggered by the chrome.storage.sync.get callback above.
+  // MutationObserver handles subsequent DOM changes.
 })();
