@@ -1,25 +1,21 @@
 SHORT DESCRIPTION (132 chars):
-See exact dates on LinkedIn posts. Plus: copy clean URLs, auto-expand posts, hide promoted content.
+See exact dates on LinkedIn posts. No more vague "2d ago" — get the real date and time, right on the page.
 
 FULL DESCRIPTION:
-LinkedIn Post Date — LinkedIn UX Toolkit
+LinkedIn Post Date — See Exact Dates on Posts
 
-Tired of LinkedIn showing "2mo ago" instead of real dates? This extension shows you the exact date every post was published — right on the page.
+Tired of LinkedIn showing "2mo ago" instead of real dates? This extension shows you the exact date and time every post was published — right next to the timestamp.
 
 🗓️ EXACT POST DATES
-See the real date (e.g., "Jun 18, 2026") right next to every timestamp on LinkedIn. Hover for the full date and time. Choose your preferred format: short, long, or ISO.
+See the real date and time (e.g., "6/18, 3:42 PM") next to every timestamp on LinkedIn. Hover for the full date. Choose your preferred format: compact, detailed, or ISO.
 
-🔗 COPY CLEAN URL
-One-click copy of a clean post link — no tracking parameters, no junk. Just a clean URL you can share.
-
-📄 AUTO-EXPAND POSTS
-No more clicking "see more" on every post. Turn this on and all posts show their full text automatically.
-
-🚫 HIDE PROMOTED POSTS
-Remove sponsored posts from your feed. Your feed, your choice.
+Works on:
+• Your main feed
+• Company and school post pages
+• Individual post pages
 
 ⚡ HOW IT WORKS
-Every LinkedIn post has a unique ID that encodes the exact timestamp. This extension reads that ID and converts it — no servers, no APIs, no data collection. Everything happens locally in your browser.
+The extension reads the relative timestamps on LinkedIn ("2d", "3mo") and calculates the actual date. No servers, no APIs, no data collection. Everything happens locally in your browser.
 
 🔒 PRIVACY FIRST
 • Zero data collection
@@ -27,4 +23,4 @@ Every LinkedIn post has a unique ID that encodes the exact timestamp. This exten
 • All processing happens locally
 • Open source — inspect the code yourself
 
-Perfect for recruiters, content creators, researchers, and anyone who uses LinkedIn daily.
+Perfect for recruiters, content creators, researchers, and anyone who wants real dates on LinkedIn.

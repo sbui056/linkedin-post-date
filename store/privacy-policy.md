@@ -8,13 +8,12 @@ LinkedIn Post Date does **not** collect, store, or transmit any personal data. A
 
 ## What the Extension Reads
 
-The extension reads LinkedIn post IDs from the page you are viewing to calculate exact dates. It does not read your personal information, messages, connections, or any other content.
+The extension reads relative timestamp text (like "2d", "3mo") on LinkedIn pages to calculate and display the actual date. It does not read your personal information, messages, connections, or any other content.
 
 ## Permissions
 
-- **Storage:** Used to save your feature toggle preferences (on/off settings). These are synced across your Chrome browsers via Chrome Sync — they are never sent to any third-party server.
+- **Storage:** Used to save your preferences (on/off toggle and date format). These are synced across your Chrome browsers via Chrome Sync — they are never sent to any third-party server.
 - **Host permission (linkedin.com):** Required to run on LinkedIn pages and display dates inline.
-- **Clipboard:** Used for the "Copy clean URL" feature — only when you click the copy button.
 
 ## Third-Party Services
 
