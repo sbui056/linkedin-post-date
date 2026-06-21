@@ -1,3 +1,7 @@
+vibe coded with claude code.
+
+i can now see dates on linkedin without extra effort.
+
 # LinkedIn Post Date
 
 See the exact date of any LinkedIn post. Chrome extension + online tool.
