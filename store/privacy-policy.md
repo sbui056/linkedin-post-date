@@ -14,7 +14,7 @@ The extension reads LinkedIn post IDs from the page you are viewing to calculate
 
 - **Storage:** Used to save your feature toggle preferences (on/off settings). These are synced across your Chrome browsers via Chrome Sync — they are never sent to any third-party server.
 - **Host permission (linkedin.com):** Required to run on LinkedIn pages and display dates inline.
-- **Clipboard Write:** Used for the "Copy clean URL" feature — only when you click the copy button.
+- **Clipboard:** Used for the "Copy clean URL" feature — only when you click the copy button.
 
 ## Third-Party Services
 
@@ -26,7 +26,7 @@ We do not share any data with anyone because we do not collect any data.
 
 ## Open Source
 
-The full source code is available on GitHub for inspection.
+The full source code is available on [GitHub](https://github.com/sbui056/linkedin-post-date) for inspection.
 
 ## Changes
 
@@ -34,4 +34,4 @@ If this privacy policy changes, we will update the "Last updated" date above. Si
 
 ## Contact
 
-For questions about this privacy policy, please open an issue on the GitHub repository.
+For questions about this privacy policy, please [open an issue](https://github.com/sbui056/linkedin-post-date/issues) on the GitHub repository.

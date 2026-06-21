@@ -34,7 +34,7 @@ function formatDate(ms, format) {
   const date = new Date(ms);
   if (format === 'iso') return date.toISOString().split('T')[0];
   const opts = format === 'long'
-    ? { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', weekday: 'long' }
+    ? { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' }
     : { year: 'numeric', month: 'short', day: 'numeric' };
   return date.toLocaleDateString(undefined, opts);
 }
